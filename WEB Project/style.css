@@ -1,0 +1,595 @@
+body {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100%;
+    height: 800px;
+    background-image: url('https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    top: 0%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-blend-mode: color-dodge;
+    border: 2px solid black;
+}
+
+.divv {
+    width: 100%;
+}
+
+.up {
+    position: sticky;
+    top: 0%;
+    height: 10%;
+    margin-bottom: 20px;
+    z-index: 1000;
+}
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-image: url('bg.jpg') ;
+    box-shadow: transparent;
+    background-position: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background-attachment: fixed;
+    border: 3px solid darkgoldenrod;
+    border-radius: 50px;
+    object-fit: cover;
+    cursor: pointer;
+    margin: 0px 30px;
+}
+
+.head {
+    font-style: italic;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+    cursor: default;
+    opacity: 0;
+    margin: 0;
+    padding-right: 125px;
+
+}
+
+.logo:hover {
+    border-color: aliceblue;
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+
+.logo:hover+.head {
+    opacity: 1;
+    transition: 0.5s;
+    animation: slideIn 0.3s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(20%);
+    }
+}
+
+.list {
+    margin: 10px;
+}
+
+.anchor {
+    margin: 15px;
+    padding: 4px;
+    font-size: large;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    color: azure;
+}
+
+.list a:hover,
+.list a.active {
+    text-decoration: underline;
+    color: crimson;
+    transition: all 0.5s;
+    transform: scale(1.5);
+}
+
+.row {
+    height: 5%;
+    background-color: azure;
+    margin-bottom: 25px;
+    display: flex;
+    border: 2px solid black;
+    justify-content: space-between;
+    border-radius: 10rem;
+    width: 90%;
+    box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.9);
+}
+
+.row div {
+    width: 30%;
+    border-radius: 10rem;
+}
+
+.leftitems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop {
+    display: flex;
+    border-radius: inherit;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.shop li {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 0px 7px;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: larger;
+    transition: all 0.4s;
+    margin: 10px;
+}
+
+.shop li:hover {
+    color: blueviolet;
+    transform: scale(1.4);
+    background-color: lightgoldenrodyellow;
+    border-radius: 20px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.searchbar {
+    position: relative;
+    border-radius: 3rem;
+    padding: 5px 5px;
+    width: 0;
+    opacity: 0;
+    transition: all 0.3s linear;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid black;
+}
+
+.searchbtn {
+    position: absolute;
+    border-radius: 2rem;
+    transition: all 0.2s linear;
+    transform: scale(0.8);
+}
+
+.searchbtn:hover {
+    color: black;
+}
+
+.search:hover>.searchbar {
+    opacity: 1;
+    width: 120%;
+}
+
+.search:hover>.searchbtn {
+    right: 37%;
+    color: black;
+    transform: scale(0.5);
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop2 {
+    justify-content: center;
+    border-radius: inherit;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.mid {
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.intro{
+    height: 100%;
+    width: 30%;
+    background-image: linear-gradient(-45deg , #ff0000,orange ,#fc00ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid black;
+    background-image: -webkit-linear-gradient(-45deg , #ff0000,orange ,#fc00ff);
+    box-shadow: 0 0px 20px rgba(225,128,0,0.5),
+    0 0px 40px rgba(0, 255, 0, 0.4);
+    filter: brightness(1.5) contrast(1.3);   
+    flex-direction: column;
+}
+/*.intro div{
+    height: 95%;
+    width: 95%;
+    background-color: black;
+    border-radius: 20px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}*/
+.featured{
+    width: 100%;
+    height: 98%;
+    background-color: grey;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border: 2px solid black;
+    border-style: double;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.featured div{
+    width: 85%;
+    height :65%;
+    object-fit : cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.buy{
+    width: 100%;
+    height: 20%;
+   /* background-image: linear-gradient(to bottom,#8bc34a,#4caf50);*/
+   background-image: linear-gradient(to bottom,beige,grey);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.buynow{
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+}
+.buynow:hover{
+    background-color: #0069d9;
+    transform: scale(1.2);
+}
+.buynow:active{
+    transform: translateY(2px);
+    box-shadow: 0px 2px 4px rgba(0, 0,0, 0.2);
+}
+.arrow-right2{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: black;
+    transition: all 0.4s;
+    transform: scale(1);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 5px;
+}
+.arrow-right2:hover{
+    transform: scale(1.2);
+    background-color: blue;
+}.arrow-right2  div{
+    height: 30%;
+    width: 30%;
+    transform: rotate(45deg);
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    margin: 14px;
+}
+.arrowleft2{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: black;
+    transition: all 0.4s;
+    transform: scale(1);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 5px;
+}
+.arrowleft2:hover{
+    transform: scale(1.2);
+    background-color: blue;
+}.arrowleft2 div{
+    height: 30%;
+    width: 30%;
+    transform: rotate(45deg);
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    margin: 0 15px;
+}
+.slide{
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+    width: 0;
+    transition: all 0.5s;
+}
+.slide.active{
+    display: block;
+    opacity: 1;
+    width: 100;
+    transition: all 0.5s;
+}
+.circle {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.9),
+        0px 3px 3px rgba(0, 0, 0, 0.9),
+        3px 0px 3px rgba(0, 0, 0, 0.9),
+        0px -3px 3px rgba(0, 0, 0, 0.9);
+}
+.cirlogo{
+    width: 150px;
+    height: 150px;
+    background-attachment: fixed;
+    border-radius: 50%;
+    border: 3px solid black;
+    background-size: cover;
+    position: absolute;
+    object-fit: cover;
+}
+.featured1  {
+    filter: brightness(0.6);
+    border-radius: 0 ;
+    height: 100% ;
+    width:100% ;
+    border: 5px solid  #ff0000;
+    border-style: double;
+}
+.text {
+    height: 115%;
+    width: 110%;
+    animation: rotateText 10s linear infinite;
+    cursor: default;
+    font-weight: bolder;
+}
+
+@keyframes rotateText {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.text span {
+    position: absolute;
+    left: 50%;
+    font-size: 1.2em;
+    transform-origin: 0 100px;
+}
+.review{
+    height: 100%;
+    width: 30%;
+    border: 2px solid black;
+    background-image: linear-gradient(45deg , #ff0000,orange ,#fc00ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid black;
+    background-image: -webkit-linear-gradient(45deg , #ff0000,orange ,#fc00ff);
+    box-shadow: 0 0px 20px rgba(225,128,0,0.5),
+    0 0px 40px rgba(0, 255, 0, 0.4);
+    filter: brightness(1.5) contrast(1.3);
+    flex-direction: column;
+}
+.customer-review{
+    background-image: linear-gradient(to right,grey,wheat,grey);
+    font-weight: bolder;
+    color:black;
+    font-family:sans-serif;
+    font-size: x-large;
+    margin:  2px;
+    border-radius: 30px ;
+    border: 2px solid black;
+    border-style: groove;
+    cursor: context-menu;
+    padding: 0 10px;
+}
+.rreview{
+    height: 90%;
+    width: 95%;
+    border-radius: 20px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  /*  background-image: url('bg.jpg');*/
+    background-image: linear-gradient(to bottom right,blueviolet,cyan);
+    transition: all 0.2s;
+}
+.aq{
+    width: 120px;
+    height: 120px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 10px;
+    margin:10px;
+    background-image: -webkit-linear-gradient(to bottom right,red,purple);
+    background-image: linear-gradient(to bottom right,red,purple);
+    border: 4px solid black;
+}
+.aq img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.aq img:hover{
+    transition: all 0.3s;
+    transform: scale(1.2);
+    border: 4px solid blue;
+}
+.az{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-image: url('bg.jpg');
+}
+.az div{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    background-image: linear-gradient(-45deg,#4567b7,#ffff,#4567b7);
+    overflow-wrap:break-word;
+    padding: 10px;
+    border-radius: 20px;
+    flex-direction: column;
+    border: 5px solid black;
+    border-style: double;
+    cursor: context-menu;
+}
+.card-content h2{
+    margin: 0;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.card-content h3{
+    margin: 0;
+    font-weight: bold;
+    font-style: italic;
+}
+.az div p{
+    padding: 0 10px;
+    flex: 1;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.cardx{
+    display: none;
+}
+.arrow-right{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    background-color: black;
+    transition: all 0.4s;
+    transform: scale(1);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.arrow-right:hover{
+    transform: scale(1.2);
+    background-color: blue;
+}.arrow-right div{
+    height: 30%;
+    width: 30%;
+    transform: rotate(45deg);
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    margin: 14px;
+}
+.arrow-left{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    background-color: black;
+    transition: all 0.4s;
+    transform: scale(1);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.arrow-left:hover{
+    transform: scale(1.2);
+    background-color: blue;
+}.arrow-left div{
+    height: 30%;
+    width: 30%;
+    transform: rotate(45deg);
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    margin: 0 18px;
+}
+.ShopNow{
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    
+}
+.ShopNow:hover{
+    background-color: #0069d9;
+    transform: scale(1.2);
+}
+.ShopNow:active{
+    transform: translateY(2px);
+    box-shadow: 0px 2px 4px rgba(0, 0,0, 0.2);
+}
+.down {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box2 {
+    height: 50vh;
+}

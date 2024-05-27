@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apext2Athletics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="divv up">
+            <header class="bar">
+                <img src="https://images.pexels.com/photos/5519470/pexels-photo-5519470.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="logo" class="logo">
+                <h2 class="head">ApextAthletics</h2>
+                <div class="list">
+                    <a href="index.html" class="anchor" id="a1">Home</a>
+                    <a href="" class="anchor" id="a2">Cart</a>
+                    <a href="" class="anchor">Follow us</a>
+                    <a href="" class="anchor">About us</a>
+                    <a href="" class="anchor">Contact us</a>
+                </div>
+            </header>
+        </div>
+        <div class="divv row">
+            <div class="leftitems">
+                <ul class="shop">
+                    <li> CRICKET </li>
+                    <li>GOLF</li>
+                    <li>FOOTBALL</li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" class="searchbar" placeholder="search">
+                <a href="#" class="searchbtn">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass fa-2x"></i>
+                </a>
+            </div>
+            <div class="items">
+                <ul class="shop">
+                    <li> HOCKEY </li>
+                    <li> TENNIS</li>
+                    <li>BADMINTON</li>
+                </ul>
+            </div>
+        </div>
+        <div class="divv mid">
+            <div class="intro">
+                <div class="customer-review">Best-Sellers</div>
+                <div class="rreview">
+                    <div class="featured">
+                        <div ><img src="/featured/kit.jpg" alt="" class="featured1 slide active"></div>
+                        <div ><img src="/featured/kit2.jpg" alt="" class="featured1 slide"></div>
+                        <div><img src="/featured/kit3.jpg" alt="" class="featured1 slide"></div>
+                        <div ><img src="/featured/kit1.jpg" alt="" class="featured1 slide"></div>
+                    </div>
+                    <div class="buy">
+                        <div class="arrowleft2" type="button" onclick="showPrevSlide()">
+                            <div></div>
+                        </div><button class="buynow">BuyNow</button>
+                        <div class="arrow-right2" onclick="showNextSlide()">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="circle">
+                <img src="logo.jpg" alt="" class="cirlogo">
+                <div class="text">
+                    <p> UNLEASH YOUR GAME</p>
+                </div>
+            </div>
+            <div class="review ">
+                <div class="customer-review">Customer-Review</div>
+                <div class="arrow-left" onclick="showPrevCard()">
+                    <div></div>
+                </div>
+                <div class="arrow-right" onclick="showNextCard()">
+                    <div></div>
+                </div>
+                <div class="card rreview card1">
+                    <div id="aq" class="aq">
+                        <img src="/imgdp/dp.jpg" alt="">
+                    </div>
+                    <div id="az" class="az">
+                        <div class="card-content">
+                            <h2>Aditya Chatterjee</h2>
+                            <h3>said</h3>
+                            <p>gksdvhvlsgdvlsdvbcxbbtv9eypiwhnv.s;vs.kx x.b
+                                xvsidh;hds;bvsdksbdvskbvsldsbdlsidbv;xvslidhspdvbslvsldivslvvbslx jxl gsogd</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card rreview cardx">
+                    <div id="aq" class="aq">
+                        <img src="/imgdp/dp2.jpg" alt="">
+                    </div>
+                    <div id="az" class="az">
+                        <div class="card-content">
+                            <h2>Lionel Messi</h2>
+                            <h3>Said</h3>
+                            <p>gksdvhvlsuaityavbcxbbtv9eypiwhnv.s;vs.kx x.b
+                                xvsidh;hds;bvsdksbdvskbvsldsbdlsidbv;xvslidhspdvbslvsldivslvvbslx jxl gsogd</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card rreview cardx">
+                    <div id="aq" class="aq">
+                        <img src="/imgdp/dp3.jpg" alt="">
+                    </div>
+                    <div id="az" class="az">
+                        <div class="card-content">
+                            <h2>MS Dhoni</h2>
+                            <h3>Said</h3>
+                            <p>
+                                xvsidh;hds;bvsdksbdvskbvsldsbdlsidbv;xvslidhspdvbslvsldivslvvbslx jxl gsogd</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divv down">
+            <button class="ShopNow">ShopNow</button>
+        </div>
+    </div>
+    <div class="box2"></div>
+    <script>
+        const text = document.querySelector('.text p');
+        text.innerHTML = text.innerText.split("").map(
+            (char, i) =>
+                `<span style ="transform:rotate(${i * 20}deg)">${char}</span>`
+        ).join("");
+
+        function showNextCard() {
+            const cards = document.querySelectorAll('.card');
+            let currentIndex = -1;
+
+            // Find the index of the currently visible card
+            for (let i = 0; i < cards.length; i++) {
+                if (cards[i].style.display !== 'none') {
+                    currentIndex = i;
+                    break;
+                }
+            }
+
+            // Hide the current card and show the next one or the first one if it's the last card
+            cards[currentIndex].style.display = 'none';
+            if (currentIndex === cards.length - 1) {
+                cards[0].style.display = 'flex';
+            } else {
+                cards[currentIndex + 1].style.display = 'flex';
+            }
+        }
+
+        function showPrevCard() {
+            const cards = document.querySelectorAll('.card');
+            let currentIndex = -1;
+
+            // Find the index of the currently visible card
+            for (let i = 0; i < cards.length; i++) {
+                if (cards[i].style.display !== 'none') {
+                    currentIndex = i;
+                    break;
+                }
+            }
+
+            // Calculate index of previous card
+            const prevIndex = (currentIndex === 0) ? cards.length - 1 : currentIndex - 1;
+
+            // Hide the current card and show the previous one
+            cards[currentIndex].style.display = 'none';
+            cards[prevIndex].style.display = 'flex';
+
+            // Ensure only one card is displayed
+            for (let i = 0; i < cards.length; i++) {
+                if (i !== prevIndex) {
+                    cards[i].style.display = 'none';
+                }
+            }
+        }
+
+
+        function showNextSlide() {
+            const slides = document.querySelectorAll('.slide'); // Update class name to 'slide'
+            let currentIndex = -1;
+
+            // Find the index of the currently visible slide
+            for (let i = 0; i < slides.length; i++) {
+                if (slides[i].classList.contains('active')) {
+                    currentIndex = i;
+                    break;
+                }
+            }
+
+            // Hide the current slide and show the next one or the first one if it's the last slide
+            slides[currentIndex].classList.remove('active');
+            if (currentIndex === slides.length - 1) {
+                slides[0].classList.add('active');
+            } else {
+                slides[currentIndex + 1].classList.add('active');
+            }
+        }
+
+        function showPrevSlide() {
+            const slides = document.querySelectorAll('.slide'); // Update class name to 'slide'
+            let currentIndex = -1;
+
+            // Find the index of the currently visible slide
+            for (let i = 0; i < slides.length; i++) {
+                if (slides[i].classList.contains('active')) {
+                    currentIndex = i;
+                    break;
+                }
+            }
+
+            // Calculate index of previous slide
+            const prevIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+
+            // Hide the current slide and show the previous one
+            slides[currentIndex].classList.remove('active');
+            slides[prevIndex].classList.add('active');
+        }
+
+        function startSlideShow() {
+            setInterval(showNextSlide, 10000); // Auto change every 10 seconds
+        }
+
+        // Start the slideshow when the page loads
+        document.addEventListener('DOMContentLoaded', startSlideShow);
+
+
+    </script>
+</body>
+
+</html>
